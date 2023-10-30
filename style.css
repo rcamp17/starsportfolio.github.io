@@ -1,0 +1,228 @@
+  @import url('https://fonts.googleapis.com/css2?family=Modak&family=Poppins:wght@100;200;300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Orbitron:wght@900&family=Poppins:wght@600&family=Zen+Dots&display=swap');
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+
+/*----------------------BACKGROUND-------------------------*/
+
+.front-page {
+  width: 100%;
+  background-image: radial-gradient(ellipse at top left, #bbbbbb24 0%, #0000003b 100%);
+}
+
+@keyframes slide-transparency {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .animate-opacity {
+    animation-name: slide-transparency;
+    animation-iteration-count: infinite;
+  }
+  .freq-5 {
+    animation-duration: 5s;
+  }
+  .freq-6 {
+    animation-duration: 6.33s;
+  }
+  .freq-7 {
+    animation-duration: 7s;
+  }
+  .freq-8 {
+    animation-duration: 8.88s;
+  }
+  .freq-9 {
+    animation-duration: 9s;
+  }
+  .freq-10 {
+    animation-duration: 10.17s;
+  }
+  .delay-2 {
+    animation-delay: 1.33s;
+  }
+  .delay-4 {
+    animation-delay: 2.11s;
+  }
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: -1000;
+  }
+  .z-1,
+  .z-2,
+  .z-3 {
+    position: absolute;
+    width: 150vw;
+    height: 150vw;
+    left: -50vw;
+    top: -50vw;
+    transform-origin: center;
+  }
+  .tile {
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: 512px 512px;
+  }
+  .top-left {
+    background-image: url("assets/BG/topleft.png");
+  }
+  .top-right {
+    background-image: url("assets/BG/topright.png");
+  }
+  .bottom-left {
+    background-image: url("assets/BG/bottomleft.png");
+  }
+  .bottom-right {
+    background-image: url("assets/BG/bottomright.png");
+  }
+
+
+
+/*---------------------------FIN BACKGROUND---------------------*/
+
+
+
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Esto hace que el cuerpo ocupe el 100% de la altura de la ventana */
+}
+
+
+
+
+/* .tituloprc, .wd {
+  display: block; 
+  margin: -45px auto; 
+} 
+
+.wd-sub{
+  color: #fff; 
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+} 
+
+*/
+
+nav ul li a {
+  position: relative; /* Establece una posición relativa */
+  z-index: 2; /* Asigna un valor de z-index mayor que el div "planet" */
+}
+
+nav {
+  display: flex; /* Utiliza flexbox para colocar los elementos en una fila */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  position: relative;
+  top: 57px;
+}
+
+nav ul {
+  list-style: none; /* Elimina los puntos de lista */
+  display: flex; /* Utiliza flexbox para colocar los elementos de la lista en una fila */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px; /* Espacio entre los elementos <a> */
+}
+
+nav a {
+  text-decoration: none; /* Elimina la decoración de texto subrayado */
+  color: rgb(113 113 122);
+  font-weight: 400;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: aliceblue; /* Cambia el color de texto al pasar el cursor sobre el enlace */
+}
+
+
+
+.portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 110vh; /* Esto hace que la sección ocupe el 100% de la altura de la ventana */
+  margin: 0; /* Elimina el margen predeterminado de la sección */
+  text-align: center; /* Alinea el contenido horizontalmente */
+  
+}
+
+ .tituloprc {
+    color: aliceblue;
+    font-size: 130px;
+    font-family: 'Poppins', sans-serif;
+    z-index: 2;
+    text-transform: lowercase;
+    letter-spacing: -5px;
+    position: relative;
+    bottom: -19px;
+    text-shadow: 8px 9px 9px rgba(0, 0, 0, 0.5);
+}
+
+.planet {
+  width: 20em;
+  height: 20em;
+  background: url(assets/wd/venus.jpg);
+  box-shadow: 
+    inset -2em -2em 2em #000,
+    -0.5em -0.5em 1em #f0d08b;
+  animation: rotate 10s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+  z-index: 1;
+  position: absolute;
+    top: 50%; /* Alinea verticalmente el centro del planeta al centro de la pantalla */
+    left: 50%; /* Alinea horizontalmente el centro del planeta al centro de la pantalla */
+    transform: translate(-50%, -50%); 
+}
+
+@keyframes rotate {
+  to{ background-position: -200% 0;}
+}
+
+.mainp {
+  position: relative;
+  bottom: 46px;
+  width: 615px;
+}
+.presentation {
+  color: rgb(113 113 122);
+  font-weight: 400;
+  font-size: 14px;
+  position: relative;
+  top: 33px;
+}
+
+/*------------------------------------Second page---------------------------------------*/
+
+.second-page {
+  width: 100%;
+  background-image: radial-gradient(circle, #ffffff2b 0%, #000000 100%);
+}
